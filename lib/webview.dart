@@ -597,7 +597,6 @@ class _SoftwareWebViewScreenState extends State<SoftwareWebViewScreen> with Widg
       }
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -1159,6 +1158,7 @@ class _SoftwareWebViewScreenState extends State<SoftwareWebViewScreen> with Widg
                       _isLoading = false;
                       _progress = 1;
                     });
+                    await Future.delayed(Duration(milliseconds: 1000));
                   },
                   onProgressChanged: (controller, progress) {
                     setState(() {

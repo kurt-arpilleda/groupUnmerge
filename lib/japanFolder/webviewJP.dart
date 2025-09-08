@@ -1159,6 +1159,9 @@ class _SoftwareWebViewScreenState extends State<SoftwareWebViewScreenJP> with Wi
                       _isLoading = false;
                       _progress = 1;
                     });
+
+                    // Setup input field detection after page loads
+                    await Future.delayed(Duration(milliseconds: 1000));
                   },
                   onProgressChanged: (controller, progress) {
                     setState(() {
